@@ -1,6 +1,6 @@
 # OpenShift Web Console Extension
 
-* Splunk Inegration
+* Splunk Integration
 * Custom Download Link
 
 1. Deploy
