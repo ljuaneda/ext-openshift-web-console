@@ -1,6 +1,6 @@
 # OpenShift Web Console Extension
 
-* Splunk Integration
+* [Splunk Integration](https://github.com/openlab-red/splunk-connect-for-kubernetes/tree/master/openshift)
 * Custom Download Link
 
 1. Deploy
