@@ -7,7 +7,7 @@
                 return {
                     type: 'dom',
                     node: '<splunk-link pod="' + resource.metadata.name +
-                    '" namespace="' + resource.metadata.namespace + '" />'
+                        '" namespace="' + resource.metadata.namespace + '" />'
                 };
             }));
         })
@@ -19,13 +19,13 @@
         var directive = {
             restrict: 'E',
             template: '<span>' +
-            '   <span class="splunk-logo">' +
-            '       <a href="{{ searchString }}" target="_blank">' +
-            '           <img src="https://www.splunk.com/content/dam/splunk2/images/logos/splunk-logo.svg" alt="Splunk"/>' +
-            '       </a>' +
-            '   </span>' +
-            '   <span class="action-divider">|</span>' +
-            '</span>',
+                '   <span class="splunk-logo">' +
+                '       <a href="{{ searchString }}" target="_blank">' +
+                '           <img src="https://www.splunk.com/content/dam/splunk2/images/logos/splunk-logo.svg" alt="Splunk"/>' +
+                '       </a>' +
+                '   </span>' +
+                '   <span class="action-divider">|</span>' +
+                '</span>',
             scope: {
                 pod: '@',
                 namespace: '@'
@@ -49,8 +49,15 @@
             return properties.splunkURL +
                 properties.splunkQueryPrefix +
                 ' namespace=' + attr.namespace +
-                ' container_name=' + container +
+                addContainerName(container) +
                 ' pod=' + attr.pod;
+        }
+
+        function addContainerName(container) {
+            if (container) {
+                return ' container_name=' + container
+            }
+            return ''
         }
 
     }
