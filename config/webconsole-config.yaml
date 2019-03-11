@@ -15,10 +15,13 @@ data:
     extensions:
       properties:
         splunkURL: "https://splunk.openlab.red"
-        splunkQueryPrefix: "/app/search/search?q=search%20index=ocp_logging"
+        splunkQueryPrefix: "/app/search/search?q=search%20"
+        splunkApplicationIndex: 'ocp_logging'
+        splunkSystemIndex: 'ocp_system'
+        splunkSystemNamespacePattern: '^(openshift|kube|splunk|istio|helvetia|default)\-?.*'
         ocUrl: "https://s3.eu-central-1.amazonaws.com/eu-central-1-openlab-red/client"
-        ocMajorVersion: "3.9"
-        ocMinorVersion: "43"
+        ocMajorVersion: '3.9'
+        ocMinorVersion: '43'
       scriptURLs:
       - https://ext-openshift-web-console.apps.openlab.red/scripts/splunk-link.js
       - https://ext-openshift-web-console.apps.openlab.red/scripts/download-link.js
