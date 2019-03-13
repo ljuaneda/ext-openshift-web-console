@@ -18,7 +18,7 @@ data:
         splunkQueryPrefix: "/app/search/search?q=search%20"
         splunkApplicationIndex: 'ocp_logging'
         splunkSystemIndex: 'ocp_system'
-        splunkSystemNamespacePattern: '^(openshift|kube|splunk|istio|helvetia|default)\-?.*'
+        splunkSystemNamespacePattern: '^(openshift|kube|splunk|istio|default)\-?.*'
         ocUrl: "https://s3.eu-central-1.amazonaws.com/eu-central-1-openlab-red/client"
         ocMajorVersion: '3.9'
         ocMinorVersion: '60'
