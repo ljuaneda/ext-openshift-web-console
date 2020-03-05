@@ -21,7 +21,7 @@
             template: '<span>' +
                 '   <span class="splunk-logo">' +
                 '       <a href="{{ searchString }}" target="_blank">' +
-                '           <img src="https://www.splunk.com/content/dam/splunk2/images/logos/splunk-logo.svg" alt="Splunk"/>' +
+                '           <img src="../images/splunk-logo.svg" alt="Splunk"/>' +
                 '       </a>' +
                 '   </span>' +
                 '   <span class="action-divider">|</span>' +
