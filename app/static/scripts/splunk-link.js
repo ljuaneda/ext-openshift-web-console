@@ -19,9 +19,9 @@
         var directive = {
             restrict: 'E',
             template: '<span>' +
-                '   <span class="splunk-logo">' +
+                '   <span >' +
                 '       <a href="{{ searchString }}" target="_blank">' +
-                '           <img src="../images/splunk-logo.svg" alt="Splunk"/>' +
+                '           Splunk <i class="fa fa-external-link"></i>' +
                 '       </a>' +
                 '   </span>' +
                 '   <span class="action-divider">|</span>' +
