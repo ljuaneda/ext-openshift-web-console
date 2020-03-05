@@ -49,30 +49,17 @@
 
             return properties.splunkURL +
                 properties.splunkQueryPrefix +
-                addIndex(properties, attr.namespace) +
-                ' namespace=' + attr.namespace +
+                ' sourcetype=openshift' +
+                ' namespace="' + attr.namespace + '"' +
                 addContainerName(container) +
-                ' pod=' + attr.pod;
+                ' pod="' + attr.pod + '"';
         }
 
         function addContainerName(container) {
             if (container) {
-                return ' container_name=' + container;
+                return ' container_name="' + container + '"';
             }
             return '';
-        }
-
-        function addIndex(properties, namespace) {
-            var index = '';
-            if (properties.splunkApplicationIndex) {
-                index = 'index=';
-                if (properties.splunkSystemIndex && namespace.search(properties.splunkSystemNamespacePattern) >= 0) {
-                    index += properties.splunkSystemIndex
-                } else {
-                    index += properties.splunkApplicationIndex;
-                }
-            }
-            return index;
         }
 
     }
